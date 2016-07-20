@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+      <form action="addUser" method="post" enctype="multipart/form-data">
+         
+     	<table >
+
+			<tr>
+				<td>Name</td>
+				<td><input type="text" id="name" placeholder="Username"
+					name="name"
+					oninvalid="this.setCustomValidity('Enter User Name Here')"
+					oninput="setCustomValidity('')" required></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="pass" id="name"
+					placeholder="password"
+					oninvalid="this.setCustomValidity('Enter Password Here')"
+					oninput="setCustomValidity('')" required></td>
+			</tr>
+<tr>
+				<td>profession</td>
+				<td><input type="text" name="profession" id="profession"
+					placeholder="profession" ></td>
+			</tr>
+			<tr>
+				<td>profession</td>
+				<td><input type="number" name="id" id="id1"
+					placeholder="id" ></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" ></td>
+				<td><input type="reset" value="Reset"></td>
+			
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

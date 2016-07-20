@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;sample.js&apos; to &apos;routes&apos;" description="Move &apos;sample.js&apos; to &apos;routes&apos;" destination="routes" element1="sample.js" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1457501091646" updateReferences="true"/>
+</session>

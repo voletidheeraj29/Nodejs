@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RestApi/views/edited_success.ejs&apos; to &apos;added_success.ejs&apos;" description="Rename resource &apos;edited_success.ejs&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="views/edited_success.ejs" name="added_success.ejs" stamp="1457356226207" updateReferences="true"/>
+</session>

@@ -1,0 +1,64 @@
+var application_root = __dirname;
+var  express = require("express"); // Initialisation of Express.js module for Node.js REST Calling
+var  path = require("path");
+
+var app = express();              // Express variable
+
+var http = require('http');
+var d = '';
+// GET Request options configuration
+var optionsget = {
+    host : 'localhost',
+    port : 3000,
+    path : '/users', // url with parameters
+    method : 'GET' // GET Method
+};
+// Preparing Express REST API 
+    app.get('/users', function (req, res) {
+        res.writeHead(200, {'Content-Type': 'application/json'});
+        // HTTP GET request
+        var reqGet = http.request(optionsget, function(response) {
+            response.on('data', function(data) { 
+            	console.log(data.users[1].firstname)
+       	res.render('../views/users');
+                  res.end(data); // Writing the Remote REST Call response to the Express REST API "getRemoteData"
+            });
+        });
+        reqGet.end();
+        reqGet.on('error', function(e) {
+            console.error(e);
+        });
+    });
+
+    
+/*    //post
+    var querystring = require('querystring');
+    var postData = querystring.stringify({
+    	 firstname : 'ramesh',
+    	 lastname : 'ta',
+    	 email : 'ramesh@cybage.com',
+    		 id :97
+    });
+    var optionsget = {
+    	    host : 'localhost',
+    	    port : 3000,
+    	    path : '/users', // url with parameters
+    	    method : 'Post' // GET Method
+    	};
+     	// Preparing Express REST API 
+    	    app.post('/users/add', function (req, res) {
+    	        res.writeHead(200, {'Content-Type': 'application/json'});
+    	        // HTTP GET request
+    	        var reqGet = http.request(optionsget, function(response) {
+    	            response.on('data', function(data) { 
+    	            	req.write(postData);
+    	                  res.end(data); // Writing the Remote REST Call response to the Express REST API "getRemoteData"
+    	            });
+    	        });
+     	        reqGet.end();
+    	        reqGet.on('error', function(e) {
+    	            console.error(e);
+    	        });
+    	    });*/
+app.listen(1212);
+console.log("Node.js server is running in port 1212.");
